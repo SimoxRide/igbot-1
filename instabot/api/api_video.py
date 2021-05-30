@@ -296,4 +296,5 @@ def resize_video(fname, thumbnail=None):
         print("Generating thumbnail...")
         thumbnail = "{fname}.jpg".format(fname=fname)
         vid.save_frame(thumbnail, t=(vid.duration / 2))
+    vid.close()
     return new_fname, thumbnail, w, h, vid.duration
